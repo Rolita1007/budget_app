@@ -75,7 +75,7 @@
 
 var angular = __webpack_require__(2);
 
-angular.module('BudetApp', []);
+angular.module('BudgetApp', []);
 
 /***/ }),
 /* 1 */
