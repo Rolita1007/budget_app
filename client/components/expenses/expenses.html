@@ -2,20 +2,20 @@
 
     <h1>EXPENSES PAGE</h1>
 
-    <form ng-submit="$ctrl.addCredit()">
-        <div>deduct $<input type="text" ng-model="$ctrl.newCreditAmount"></div>
-        <div>NOTE: <input type="text" ng-model="$ctrl.newCreditNote"></div>
-        <div><input type="submit" value="Add to Credits"></div>
+    <form ng-submit="$ctrl.addExpense()">
+        <div>deduct $<input type="text" ng-model="$ctrl.newExpenseAmount"></div>
+        <div>NOTE: <input type="text" ng-model="$ctrl.newExpenseNote"></div>
+        <div><input type="submit" value="Add Expense"></div>
     </form>
 
-    <h3>Total Credit</h3>
-    <h3>$515</h3>
+    <h3>Total Expenses</h3>
+    <h3>$249</h3>
 
     <table>
-        <tr ng-repeat="creditEntry in $ctrl.creditEntries">
-            <td>{{creditEntry.amount}}</td>
-            <td>{{creditEntry.note}}</td>
-            <td>{{creditEntry.createdAt}}</td>
+        <tr ng-repeat="ExpenseEntry in $ctrl.expenseEntries">
+            <td>{{expenseEntry.amount}}</td>
+            <td>{{expenseEntry.note}}</td>
+            <td>{{expenseEntry.createdAt}}</td>
         </tr>
     </table>
 

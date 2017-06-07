@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/budget_app');
+mongoose.connect('mongodb://localhost/BudgetApp');
 
 var Credit = require('../models/credit');
 var Expense = require('../models/expense');
@@ -23,9 +23,9 @@ var credits = [
 
 var expenses =[
 {amount: 800, note: "Mortgage"},
-{amount: 35, note: "Sas"},
+{amount: 35, note: "Gas"},
 {amount: 200, note: "Sports"},
-{amount: 40, note: "Pookie Bear's food"}
+{amount: 40, note: "Pookie Bear food"}
 ];
 
 //save credits

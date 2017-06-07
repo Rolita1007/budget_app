@@ -6,15 +6,13 @@ mongoose.Promise = global.Promise;
 var CreditSchema = new Schema ({
   amount: Number;
   note: String;
-  createdAt: Date;
-  updatedAt: Date
+  createdAt: Date
 });
 
 var ExpensesSchema = new Schema ({
   amount: Number;
   note: String;
-  createdAt: Date;
-  updatedAt: Date
+  createdAt: Date
 });
 
 CreditSchema.pre('save', function (next) {
@@ -25,13 +23,6 @@ CreditSchema.pre('save', function (next) {
   next();
 });
 
-CreditSchema.pre('save', function (next) {
-  now = new Date();
-  if (!this.updatedAt) {
-    this.updatedAt = now;
-  }
-  next();
-});
 
 ExpensesSchema.pre('save', function (next) {
   now = new Date();
@@ -41,13 +32,6 @@ ExpensesSchema.pre('save', function (next) {
   next();
 });
 
-ExpensesSchema.pre('save', function (next) {
-  now = new Date();
-  if (!this.updatedAt) {
-    this.updatedAt = now;
-  }
-  next();
-});
 
 var CreditModel = mongoose.model('Credit', CreditSchema);
 var ExpenseModel = mongoose.model('Expense', ExpenseSchema);

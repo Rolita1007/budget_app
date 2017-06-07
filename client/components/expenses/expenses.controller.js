@@ -1,21 +1,30 @@
-ExpensesController.$inject = ['$http'];
+ExpensesController.$inject = ['ExpensesServices'];
 
-function ExpensesController($http) {
+function ExpensesController(ExpensesServices) {
 
     let vm = this;
 
     vm.expensesEntries = [
         {
-            amount: 2000,
-            note: Payday,
-            createdAt: Date(),
-            updatedAt: Date()
+            amount: 800,
+            note: Mortgage,
+            createdAt: Date()
         },
         {
-            amount: 456,
-            note: 456,
-            createdAt: 456,
-        }
+            amount: 35,
+            note: Gas,
+            createdAt: Date(),
+        },
+        {
+            amount: 200,
+            note: Sports,
+            createdAt: Date()
+        },
+        {
+            amount: 40,
+            note: Pookie Bear Food,
+            createdAt: Date()
+        },
     ];
 
     /**
@@ -32,20 +41,19 @@ function ExpensesController($http) {
         // only push to the creditEntries array if the ajax call is successful
 
         vm.expensesEntries.push({
-            amount: vm.newCreditAmount,
-            note: vm.newCreditNote,
+            amount: vm.newExpenseAmount,
+            note: vm.newExpenseNote,
             createdAt: new Date(),
-            updatedAt: new Date()
         })
 
         resetForm();
     }
 
     function resetForm() {
-        vm.newCreditAmount = '';
-        vm.newCreditNote = '';
+        vm.newExpenseAmount = '';
+        vm.newExpenseNote = '';
     }
 
 }
 
-module.exports = CreditsController;
+module.exports = ExpensesController;

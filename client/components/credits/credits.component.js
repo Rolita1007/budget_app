@@ -7,4 +7,4 @@ let CreditsComponent = {
     controller: creditsController
 }
 
-angular.module('BudgetApp').component('credits', CreditsComponent);s', CreditsComponent);
+angular.module('BudgetApp').component('credits', CreditsComponent);

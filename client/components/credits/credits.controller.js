@@ -1,19 +1,29 @@
-CreditsController.$inject = ['$http'];
+CreditsController.$inject = ['CreditsService'];
 
-function CreditsController($http) {
+function CreditsController(CreditsService) {
 
     let vm = this;
 
     vm.creditEntries = [
         {
-            amount: 123,
-            note: 123,
-            createdAt: 123,
+            amount: 2000,
+            note: 'Payday',
+            createdAt: Date(),
         },
         {
-            amount: 456,
-            note: 456,
-            createdAt: 456,
+            amount: 100,
+            note: Birthday Gift,
+            createdAt: Date(),
+        },
+        {
+            amount: 500,
+            note: Lottery,
+            createdAt: Date()
+        },
+        {
+            amount: 2000,
+            note: Payday,
+            createdAt: Date()
         }
     ]
 
