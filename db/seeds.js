@@ -28,3 +28,20 @@ var expenses =[
 {amount: 40, note: "Pookie Bear's food"}
 ];
 
+//save credits
+credits.save (function(error) {
+  if(error) {
+    console.log(error);
+    return;
+  }
+  console.log("credits created!")
+});
+
+//save expenses
+expenses.save (function(error) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+  console.log("expenses created!")
+})

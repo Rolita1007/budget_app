@@ -16,7 +16,7 @@ function ExpensesController($http) {
             note: 456,
             createdAt: 456,
         }
-    ]
+    ];
 
     /**
      *
@@ -25,16 +25,17 @@ function ExpensesController($http) {
      */
 
 
-    vm.addCredit = function () {
+    vm.addExpenses = function () {
 
         // make an ajax call to save the new Credit to the database
 
         // only push to the creditEntries array if the ajax call is successful
 
-        vm.creditEntries.push({
+        vm.expensesEntries.push({
             amount: vm.newCreditAmount,
             note: vm.newCreditNote,
-            createdAt: new Date()
+            createdAt: new Date(),
+            updatedAt: new Date()
         })
 
         resetForm();
